@@ -26,6 +26,10 @@
             opacity: 0;
             transform: translateY(50px);
         }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -35,18 +39,15 @@
                 <span class="text-2xl">⚡</span>
                 <h1 class="text-3xl font-bold text-blue-400">XWORM RCE</h1>
             </div>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#what-it-does" class="text-gray-300 hover:text-blue-400 transition-colors">What it does</a>
-                <a href="#requirements" class="text-gray-300 hover:text-blue-400 transition-colors">Requirements</a>
-                <a href="#downloads" class="text-gray-300 hover:text-blue-400 transition-colors">Downloads</a>
-                <a href="#pricing" class="text-gray-300 hover:text-blue-400 transition-colors">Pricing</a>
+            <nav class="flex space-x-6">
+                <a href="features.html" class="text-gray-300 hover:text-blue-400 transition-colors">Features</a>
+                <a href="community.html" class="text-gray-300 hover:text-blue-400 transition-colors">Community</a>
             </nav>
-            <a href="pricing.html" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors glow hover-scale">Get it</a>
         </div>
     </header>
 
-    <section class="py-20 px-4 md:px-8">
-        <div class="max-w-7xl mx-auto text-center section-reveal">
+    <main class="py-20 px-4 md:px-8">
+        <section class="max-w-7xl mx-auto text-center section-reveal">
             <h2 class="text-xl text-blue-400 font-semibold">Premium • High Performance • Windows Only</h2>
             <h1 class="text-5xl md:text-6xl font-bold mt-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">XWORM RCE</h1>
             <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">XWORM RCE delivers powerful remote code execution tools, built in Python for Windows, designed to outshine overpriced alternatives with unmatched performance.</p>
@@ -67,129 +68,86 @@
                     <span class="text-blue-400 font-semibold">Premium Access</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="py-16 px-4 md:px-8">
-        <div class="max-w-7xl mx-auto text-center section-reveal">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-gray-800/50 p-6 rounded-xl glow">
-                    <div class="text-2xl font-bold text-blue-400">168</div>
-                    <div class="text-gray-300">Stars</div>
-                </div>
-                <div class="bg-gray-800/50 p-6 rounded-xl glow">
-                    <div class="text-2xl font-bold text-blue-400">45</div>
-                    <div class="text-gray-300">Forks</div>
-                </div>
-                <div class="bg-gray-800/50 p-6 rounded-xl glow">
-                    <div class="text-2xl font-bold text-blue-400">∞</div>
-                    <div class="text-gray-300">Reliable Updates</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 md:px-8" id="what-it-does">
-        <div class="max-w-7xl mx-auto section-reveal">
-            <h2 class="text-xl text-blue-400 font-semibold text-center">Unlike Others</h2>
-            <h1 class="text-4xl md:text-5xl font-bold text-center mt-4">Actually works</h1>
-            <p class="mt-6 text-lg text-gray-300 text-center max-w-2xl mx-auto">All the features you need for remote code execution, delivered reliably without the hassle of subscriptions or broken promises.</p>
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-gray-800/50 p-6 rounded-xl glow hover-scale">
-                    <span class="text-2xl">⚡</span>
-                    <h3 class="text-xl font-semibold text-blue-400 mt-2">Fast Multi-Threaded RCE</h3>
-                    <p class="mt-2 text-gray-300">Leverages Python’s multithreading for lightning-fast remote code execution. Execute complex commands across multiple targets simultaneously with minimal latency.</p>
-                </div>
-                <div class="bg-gray-800/50 p-6 rounded-xl glow hover-scale">
-                    <span class="text-2xl">🔍</span>
-                    <h3 class="text-xl font-semibold text-blue-400 mt-2">Scrape from All Malware Analysis</h3>
-                    <p class="mt-2 text-gray-300">Automatically pulls data from major malware analysis platforms. Gain insights from VirusTotal, Hybrid Analysis, and more, all in one place.</p>
-                </div>
-                <div class="bg-gray-800/50 p-6 rounded-xl glow hover-scale">
-                    <span class="text-2xl">🖥️</span>
-                    <h3 class="text-xl font-semibold text-blue-400 mt-2">RDP Stealer</h3>
-                    <p class="mt-2 text-gray-300">Silently captures Remote Desktop Protocol credentials and session data. Reliable extraction from active sessions without detection.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 md:px-8" id="requirements">
-        <div class="max-w-7xl mx-auto text-center section-reveal">
-            <h2 class="text-2xl text-blue-400 font-semibold">Still paying for RCE tools?</h2>
-            <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">Get everything you need for remote code execution with XWORM RCE, built for Windows with constant updates.</p>
-            <div class="mt-8 flex justify-center space-x-4">
-                <a href="pricing.html" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors glow hover-scale flex items-center space-x-2">
-                    <span>⚡</span>
-                    <span>View Plans</span>
-                </a>
-                <a href="#community" class="bg-gray-800 text-white px-6 py-3 rounded-full hover:bg-gray-700 transition-colors hover-scale flex items-center space-x-2">
-                    <span>💬</span>
-                    <span>Join Community</span>
-                </a>
-            </div>
-            <div class="mt-12">
-                <h3 class="text-xl font-semibold text-blue-400">What you need</h3>
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                    <div class="bg-gray-800/50 p-4 rounded-xl glow flex items-center space-x-2">
-                        <span class="text-2xl">🪟</span>
-                        <p class="text-gray-300">Windows 7+</p>
+        <section class="py-16 px-4 md:px-8">
+            <div class="max-w-7xl mx-auto text-center section-reveal">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800/50 p-6 rounded-xl glow">
+                        <div class="text-2xl font-bold text-blue-400">168</div>
+                        <div class="text-gray-300">Stars</div>
                     </div>
-                    <div class="bg-gray-800/50 p-4 rounded-xl glow flex items-center space-x-2">
-                        <span class="text-2xl">🌐</span>
-                        <p class="text-gray-300">IPv4/IPv6</p>
+                    <div class="bg-gray-800/50 p-6 rounded-xl glow">
+                        <div class="text-2xl font-bold text-blue-400">45</div>
+                        <div class="text-gray-300">Forks</div>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-xl glow">
+                        <div class="text-2xl font-bold text-blue-400">∞</div>
+                        <div class="text-gray-300">Reliable Updates</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="py-16 px-4 md:px-8 bg-black/50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 section-reveal">
-            <div>
-                <div class="flex items-center space-x-2">
-                    <span class="text-2xl">⚡</span>
-                    <h2 class="text-xl font-bold text-blue-400">XWORM RCE</h2>
-                </div>
-                <p class="mt-4 text-gray-300">Premium remote code execution tool for Windows. Built by developers tired of paying for broken tools.</p>
-                <div class="mt-4 flex space-x-2 text-2xl">
-                    <span>🐙</span>
-                    <span>📱</span>
-                    <span>📦</span>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-blue-400">Project</h3>
-                <div class="mt-4 flex flex-col space-y-2">
-                    <a href="#features" class="text-gray-300 hover:text-blue-400 transition-colors">Features</a>
-                    <a href="#downloads" class="text-gray-300 hover:text-blue-400 transition-colors">Downloads</a>
-                    <a href="#issues" class="text-gray-300 hover:text-blue-400 transition-colors">Issues</a>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-blue-400">Community</h3>
-                <div class="mt-4 flex flex-col space-y-2">
-                    <a href="#telegram" class="text-gray-300 hover:text-blue-400 transition-colors">Telegram</a>
-                    <a href="#discussions" class="text-gray-300 hover:text-blue-400 transition-colors">Discussions</a>
-                    <a href="#contributing" class="text-gray-300 hover:text-blue-400 transition-colors">Contributing</a>
-                    <a href="#roadmap" class="text-gray-300 hover:text-blue-400 transition-colors">Roadmap</a>
+        <section class="py-20 px-4 md:px-8" id="what-it-does">
+            <div class="max-w-7xl mx-auto section-reveal">
+                <h2 class="text-xl text-blue-400 font-semibold text-center">Unlike Others</h2>
+                <h1 class="text-4xl md:text-5xl font-bold text-center mt-4">Actually works</h1>
+                <p class="mt-6 text-lg text-gray-300 text-center max-w-2xl mx-auto">All the features you need for remote code execution, delivered reliably without the hassle of subscriptions or broken promises.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800/50 p-6 rounded-xl glow hover-scale">
+                        <span class="text-2xl">⚡</span>
+                        <h3 class="text-xl font-semibold text-blue-400 mt-2">Fast Multi-Threaded RCE</h3>
+                        <p class="mt-2 text-gray-300">Leverages Python’s multithreading for lightning-fast remote code execution. Execute complex commands across multiple targets simultaneously with minimal latency.</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-xl glow hover-scale">
+                        <span class="text-2xl">🔍</span>
+                        <h3 class="text-xl font-semibold text-blue-400 mt-2">Scrape from All Malware Analysis</h3>
+                        <p class="mt-2 text-gray-300">Automatically pulls data from major malware analysis platforms. Gain insights from VirusTotal, Hybrid Analysis, and more, all in one place.</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-xl glow hover-scale">
+                        <span class="text-2xl">🖥️</span>
+                        <h3 class="text-xl font-semibold text-blue-400 mt-2">RDP Stealer</h3>
+                        <p class="mt-2 text-gray-300">Silently captures Remote Desktop Protocol credentials and session data. Reliable extraction from active sessions without detection.</p>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h3 class="text-lg font-semibold text-blue-400">Legal</h3>
-                <div class="mt-4 flex flex-col space-y-2">
-                    <a href="#license" class="text-gray-300 hover:text-blue-400 transition-colors">License</a>
-                    <a href="#third-party" class="text-gray-300 hover:text-blue-400 transition-colors">Third-Party</a>
-                    <a href="#notice" class="text-gray-300 hover:text-blue-400 transition-colors">Notice</a>
+        </section>
+
+        <section class="py-20 px-4 md:px-8" id="requirements">
+            <div class="max-w-7xl mx-auto text-center section-reveal">
+                <h2 class="text-2xl text-blue-400 font-semibold">Still paying for RCE tools?</h2>
+                <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">Get everything you need for remote code execution with XWORM RCE, built for Windows with constant updates.</p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="pricing.html" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors glow hover-scale flex items-center space-x-2">
+                        <span>⚡</span>
+                        <span>View Plans</span>
+                    </a>
+                </div>
+                <div class="mt-12">
+                    <h3 class="text-xl font-semibold text-blue-400">What you need</h3>
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                        <div class="bg-gray-800/50 p-4 rounded-xl glow flex items-center space-x-2">
+                            <span class="text-2xl">🪟</span>
+                            <p class="text-gray-300">Windows 7+</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-xl glow flex items-center space-x-2">
+                            <span class="text-2xl">🌐</span>
+                            <p class="text-gray-300">IPv4/IPv6</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="mt-12 text-center text-gray-400">
-            <p>© 2025 XWORM RCE Project. All rights reserved.</p>
-            <p class="mt-2">Built by Issho</p>
-            <p class="mt-2">For authorized use only. Follow your local laws. We're not responsible if you mess up.</p>
-        </div>
-    </footer>
+        </section>
+
+        <footer class="py-16 px-4 md:px-8 bg-black/50 backdrop-blur-md text-center">
+            <div class="max-w-7xl mx-auto section-reveal">
+                <p class="text-gray-400">© 2025 XWORM RCE Project. All rights reserved.</p>
+                <p class="mt-2 text-gray-400">Built by LEL</p>
+                <p class="mt-2 text-gray-400">For authorized use only. Follow your local laws. We're not responsible if you mess up.</p>
+            </div>
+        </footer>
+    </main>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
