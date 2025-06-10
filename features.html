@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XWORM RCE - Features</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+        }
+        .glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="py-6 px-4 md:px-8 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl">⚡</span>
+                <h1 class="text-3xl font-bold text-blue-400">XWORM RCE</h1>
+            </div>
+            <nav class="flex space-x-6">
+                <a href="features.html" class="text-gray-300 hover:text-blue-400 transition-colors">Features</a>
+                <a href="community.html" class="text-gray-300 hover:text-blue-400 transition-colors">Community</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-20 px-4 md:px-8">
+        <section class="max-w-7xl mx-auto text-center section-reveal">
+            <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">XWORM RCE Features</h1>
+            <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">Explore the powerful features of XWORM RCE, built for unmatched performance on Windows systems.</p>
+        </section>
+
+        <section class="py-20 px-4 md:px-8">
+            <div class="max-w-7xl mx-auto section-reveal">
+                <div class="space-y-12">
+                    <div class="bg-gray-800/50 p-8 rounded-xl glow hover-scale">
+                        <span class="text-3xl">⚡</span>
+                        <h2 class="text-2xl font-semibold text-blue-400 mt-2">Fast Multi-Threaded RCE</h2>
+                        <p class="mt-4 text-gray-300">Harness the power of Python’s multithreading to execute complex commands across multiple targets simultaneously. XWORM RCE optimizes thread management to ensure minimal latency, allowing for rapid deployment of payloads and real-time control over remote systems. Perfect for scenarios requiring high-speed execution without compromising stability.</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-8 rounded-xl glow hover-scale">
+                        <span class="text-3xl">🔍</span>
+                        <h2 class="text-2xl font-semibold text-blue-400 mt-2">Scrape from All Malware Analysis</h2>
+                        <p class="mt-4 text-gray-300">Seamlessly aggregates data from leading malware analysis platforms like VirusTotal, Hybrid Analysis, and ANY.RUN. XWORM RCE provides a unified interface to collect and analyze reports, signatures, and behavioral data, enabling you to stay ahead of detection mechanisms and refine your strategies with comprehensive insights.</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-8 rounded-xl glow hover-scale">
+                        <span class="text-3xl">🖥️</span>
+                        <h2 class="text-2xl font-semibold text-blue-400 mt-2">RDP Stealer</h2>
+                        <p class="mt-4 text-gray-300">Effortlessly captures Remote Desktop Protocol credentials and session data without alerting the target. XWORM RCE’s stealthy extraction ensures reliable collection of sensitive information from active RDP sessions, with robust handling to avoid detection by security software, making it ideal for discreet operations.</p>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="pricing.html" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors glow hover-scale flex items-center justify-center space-x-2 mx-auto">
+                        <span>⚡</span>
+                        <span>Get Started with XWORM RCE</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-16 px-4 md:px-8 bg-black/50 backdrop-blur-md text-center">
+            <div class="max-w-7xl mx-auto section-reveal">
+                <p class="text-gray-400">© 2025 XWORM RCE Project. All rights reserved.</p>
+                <p class="mt-2 text-gray-400">Built by LEL</p>
+                <p class="mt-2 text-gray-400">For authorized use only. Follow your local laws. We're not responsible if you mess up.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate sections on scroll
+        gsap.utils.toArray(".section-reveal").forEach(section => {
+            gsap.fromTo(section, 
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+
+        // Animate header elements
+        gsap.from("header > div", {
+            opacity: 0,
+            y: -20,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+
+        // Hover animation for buttons
+        document.querySelectorAll(".hover-scale").forEach(element => {
+            element.addEventListener("mouseenter", () => {
+                gsap.to(element, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+            });
+            element.addEventListener("mouseleave", () => {
+                gsap.to(element, { scale: 1, duration: 0.3, ease: "power2.out" });
+            });
+        });
+    </script>
+</body>
+</html>
